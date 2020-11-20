@@ -68,5 +68,13 @@ public:
 		}
 		prvia = pom;
 	}
+	~Arhiva() {
+		ElemArhive* tek;
+		while (prvia) {
+			tek = prvia;
+			delete[]tek;
+			prvia = prvia->sled;
+		}
+	}
 };
 #endif // !_arhiva_h_

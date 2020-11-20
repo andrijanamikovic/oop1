@@ -12,7 +12,7 @@ class Flota {
 	Elem* prvi = nullptr;
 public:
 	Flota(string n) :nazivFlote(n){}
-
+	~Flota();
 	void dodaj(Avion* a);
 
 	int brojAviona() {

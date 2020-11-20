@@ -1,5 +1,15 @@
 #include "flota.h"
 
+Flota::~Flota()
+{
+	Elem* tek;
+	while (prvi) {
+		tek = prvi;
+		delete[]tek;
+		prvi = prvi->sled;
+	}
+}
+
 void Flota::dodaj(Avion* a)
 {
 	Elem* pom = new Elem(a);
@@ -8,6 +18,7 @@ void Flota::dodaj(Avion* a)
 	}
 	prvi = pom;
 }
+
 
 int Flota::maxPutnka() {
 	Elem* tek = prvi;
