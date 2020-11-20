@@ -5,8 +5,8 @@
 class Let {
 	string polaziste;
 	string dolaziste;
-	int id;
-	static int current_id;
+	static int id;
+	const int current_id;
 	Avion* av;
 public:
 	Let(string p, string d, Avion* a) :polaziste(p), dolaziste(d), av(a), id(current_id++) {};
@@ -20,4 +20,6 @@ public:
 		cout << "LET-" << dohvPol() << ":" << dohvDol() << endl;
 	}
 };
+
+int Let::id = 0;
 #endif // !_let_h_

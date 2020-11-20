@@ -10,7 +10,7 @@ class Arhiva {
 	};
 	ElemArhive* prvia = nullptr;
 public:
-	ElemArhive* dohvLetovePol(string p) {
+/*	ElemArhive* dohvLetovePol(string p) {
 		ElemArhive* teka = prvia;
 		ElemArhive* q = nullptr;
 		while (teka) {
@@ -43,8 +43,30 @@ public:
 			}
 		}
 		return q;
+	}*/
+	ElemArhive* dohvLetove(string p ="", string d="") {
+		ElemArhive* teka = prvia;
+		ElemArhive* q = nullptr;
+		while (teka) {
+			if (teka->let->dohvDol() == p|| teka->let->dohvDol() == d) {
+				if (!q) {
+					q = teka;
+				}
+				else {
+					ElemArhive* pomocni;
+					pomocni = new ElemArhive(teka->let, q);
+					q = pomocni;
+				}
+			}
+		}
+		return q;
 	}
-
-
+	void dodaj(Let* l) {
+		ElemArhive* pom = new ElemArhive(l);
+		if (prvia) {
+			pom->sled = prvia;
+		}
+		prvia = pom;
+	}
 };
 #endif // !_arhiva_h_

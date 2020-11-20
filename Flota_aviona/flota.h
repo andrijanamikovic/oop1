@@ -13,6 +13,8 @@ class Flota {
 public:
 	Flota(string n) :nazivFlote(n){}
 
+	void dodaj(Avion* a);
+
 	int brojAviona() {
 		Elem* tek = prvi;
 		int br = 0;

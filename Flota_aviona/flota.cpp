@@ -1,5 +1,14 @@
 #include "flota.h"
 
+void Flota::dodaj(Avion* a)
+{
+	Elem* pom = new Elem(a);
+	if (prvi) {
+		pom->sled = prvi;
+	}
+	prvi = pom;
+}
+
 int Flota::maxPutnka() {
 	Elem* tek = prvi;
 	int max = 0;
