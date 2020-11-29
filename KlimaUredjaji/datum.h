@@ -10,9 +10,12 @@ class Datum {
 	int mesec = 11;
 	int godina = 2019;
 public:
+	Datum() {};
 	Datum(int d, int m, int g);
 	int operator[] (string s) const ;
 	friend ostream& operator<<(ostream& os, Datum d);
 	friend bool operator < (const Datum d1, const Datum d2);
+
+	friend class Kvar;
 };
 #endif // !_datum_h_
