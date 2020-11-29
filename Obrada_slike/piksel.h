@@ -8,6 +8,7 @@ class Piksel {
 	int green = 0;
 	int blue = 0;
 public:
+	Piksel() {}
 	Piksel(int r, int g, int b) {
 		if (r >= 0 && r <= 255) { red = r; }
 		if (b >= 0 && b <= 255) { blue = b; }
