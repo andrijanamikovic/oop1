@@ -1,4 +1,4 @@
-#include "garancija.h"
+#include "uredjaj.h"
 
 int main() {
 	Datum d1(1, 3, 2012);
@@ -12,12 +12,16 @@ int main() {
 	k.set_otklonjen(true);
 	//cout << k;
 	Datum d3(4, 2, 2340);
-	Kvar k1(d3, "jebiga");
+	Kvar k1(d3, "ne radi");
 	Garancija g(d1, d2);
 	g.dodaj_kvar(k);
 	g.dodaj_kvar(k1);
-	cout << g.poslednji() << endl;
-	cout << g;
-	
+	//cout << g.poslednji() << endl;
+	//cout << g;
+	Uredjaj u("Mile");
+	Uredjaj u2("Mile");
+	u.set_garaniciju(d1);
+	cout << u.get_garanciju();
+	cout << u;		//ne znam zasto mu smeta to sto je obrisan kopirajuci 
 
 }

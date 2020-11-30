@@ -1,0 +1,18 @@
+#include "uredjaj.h"
+
+static int current_id = 1;
+
+void Uredjaj::set_garaniciju(Datum poc)
+{
+	gar = Garancija(poc, Datum(0,0,0));
+}
+
+bool operator==(Uredjaj u1, Uredjaj u2)
+{
+	return u1.Proizvodjac == u2.Proizvodjac;
+}
+
+ostream& operator<<(ostream& os, Uredjaj u)
+{
+	return os << u.Proizvodjac << ":" << u.id;
+}

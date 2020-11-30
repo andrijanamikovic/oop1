@@ -12,6 +12,7 @@ class Garancija {
 	Datum kraj;
 	Elem* prvi = nullptr;
 public:
+	Garancija() {};
 	Garancija (Datum p, Datum k):poc(p),kraj(k) {}
 	void dodaj_kvar(Kvar kv);
 	Kvar poslednji() const {
