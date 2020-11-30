@@ -3,15 +3,16 @@
 #include "garancija.h"
 
 class Uredjaj {
+protected:
 	string Proizvodjac;
 	static int current_id;
 	int id;
 	Garancija gar;
-	int novi=5;
+	static int novi;
 
 public:
 	//Uredjaj(const Uredjaj& u) = delete;
-
+	Uredjaj() {};
 	Uredjaj(string p) :Proizvodjac(p), id(current_id++) {};
 	void set_garaniciju(Datum poc);
 	Garancija get_garanciju()const { return gar; }

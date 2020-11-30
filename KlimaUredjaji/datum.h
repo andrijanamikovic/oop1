@@ -17,5 +17,6 @@ public:
 	friend bool operator < (const Datum d1, const Datum d2);
 
 	friend class Kvar;
+	friend class Klima;
 };
 #endif // !_datum_h_

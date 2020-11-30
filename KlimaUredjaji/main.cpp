@@ -1,4 +1,4 @@
-#include "uredjaj.h"
+#include "klima.h"
 
 int main() {
 	Datum d1(1, 3, 2012);
@@ -21,7 +21,10 @@ int main() {
 	Uredjaj u("Mile");
 	Uredjaj u2("Mile");
 	u.set_garaniciju(d1);
-	cout << u.get_garanciju();
-	cout << u;		//ne znam zasto mu smeta to sto je obrisan kopirajuci 
+	//cout << u.get_garanciju();
+	//cout << u;	
+	Klima klima(24);
 
+	klima.set_garancija(d2);
+	cout << klima;
 }
