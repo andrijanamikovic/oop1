@@ -1,6 +1,6 @@
 #include "uredjaj.h"
 
-static int current_id = 1;
+int Uredjaj::current_id = 1;
 
 void Uredjaj::set_garaniciju(Datum poc)
 {

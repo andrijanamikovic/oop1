@@ -10,7 +10,7 @@ class Uredjaj {
 	int novi=5;
 
 public:
-	Uredjaj(const Uredjaj& u) = delete;
+	//Uredjaj(const Uredjaj& u) = delete;
 
 	Uredjaj(string p) :Proizvodjac(p), id(current_id++) {};
 	void set_garaniciju(Datum poc);
