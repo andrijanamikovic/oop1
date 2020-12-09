@@ -18,7 +18,7 @@ public:
 	int get_blue() const { return blue; }
 	int get_green() const { return green; }
 
-	Piksel &operator +=(Piksel p1);
+	Piksel &operator +(const Piksel p1)const;
 	friend bool operator==(const Piksel& p1, const Piksel& p2);
 	friend ostream& operator<<(ostream& os, Piksel p1);
 	

@@ -1,18 +1,13 @@
 #include "piksel.h"
 
 
-Piksel& Piksel::operator+=(Piksel p1)
+Piksel& Piksel::operator+(const Piksel p1) const
 {
-    red += p1.get_red();
-    red = red / 2;
-
-    blue += p1.get_blue();
-    blue = blue / 2;
-
-    green += p1.get_green();
-    green = green / 2;
-    
-    return *this;
+    Piksel p;
+    p.blue = (blue + p1.blue) / 2;
+    p.red = (red + p1.red) / 2;
+    p.green = (green + p1.green) / 2;
+    return p;
 }
 
 bool operator==(const Piksel& p1, const Piksel& p2)
