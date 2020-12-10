@@ -12,7 +12,8 @@ bool operator==(Uredjaj u1, Uredjaj u2)
 	return u1.Proizvodjac == u2.Proizvodjac;
 }
 
-ostream& operator<<(ostream& os, Uredjaj u)
+ostream& operator<<(ostream& os, Uredjaj& u)
 {
-	return os << u.Proizvodjac << ":" << u.id;
+	string s = u.Proizvodjac + ":" + to_string(u.id);
+	return os << s;
 }

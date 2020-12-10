@@ -3,25 +3,28 @@
 #include "garancija.h"
 
 class Uredjaj {
+private:
+	static int current_id;
 protected:
 	string Proizvodjac;
-	static int current_id;
 	int id;
 	Garancija gar;
-	static int novi;
-
+	int max_kvarova;
 public:
-	//Uredjaj(const Uredjaj& u) = delete;
-	Uredjaj() {};
-	Uredjaj(string p) :Proizvodjac(p), id(current_id++) {};
+	Uredjaj(string p, int max) :Proizvodjac(p), max_kvarova(max), id(current_id++){};
+	Uredjaj(const Uredjaj& u) = delete;
+	Uredjaj(Uredjaj&& u) = delete;
+	Uredjaj& operator = (const Uredjaj& u) = delete;
+	Uredjaj& operator = (Uredjaj&& u) = delete;
+
 	void set_garaniciju(Datum poc);
 	Garancija get_garanciju()const { return gar; }
 
-	int broj_kvarova() const { return novi; }
+	int broj_kvarova() const { return max_kvarova; }
 
 	friend bool operator == (Uredjaj u1, Uredjaj u2);
 
-	friend ostream& operator << (ostream& os, Uredjaj u);
+	friend ostream& operator << (ostream& os, Uredjaj& u);
 
 };
 #endif // ! _uredjaj_h_
