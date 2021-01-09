@@ -12,13 +12,7 @@ class Mec {
 	bool odigran_mec = false;
 	Par<int>poeni;
 public:
-	Mec(Tim* t1, Tim* t2) :timovi(t1, t2),poeni(new int(0),new int(0)) {
-		//int b = 0;
-		//poeni.setPrvi(&b);
-		//poeni.setDrugi(&b);
-		//poeni = Par<int>::Par(&b, &b);
-		//ishod = ishod_meca::POBEDA_DOMACINA;
-	}
+	Mec(Tim* t1, Tim* t2) :timovi(t1, t2),poeni(new int(0),new int(0)) {}
 	void odigrati();//Tim& t1, Tim& t2);
 	bool mecOdigran() const { return odigran_mec; }
 	Par<int> getPoeni() {

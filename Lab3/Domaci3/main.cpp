@@ -29,9 +29,10 @@ int main() {
 		//cout << endl << (t == t2);
 		Mec m(&t,&t2);
 		//cout << t2.brojIgracauTimu();
+		cout << t << endl;
 		m.odigrati();
 		cout << m.getPoeni() << endl;
-		cout << m;
+		cout << t;
 
 	}
 	catch (exception e) {
