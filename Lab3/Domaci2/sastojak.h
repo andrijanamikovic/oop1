@@ -10,7 +10,9 @@ public:
 	Namernica getNamernicu() const { return nam; }
 	double getKolicinu() const { return kolicina; }
 
-	NutritivnaVrednost odreditiNutritivnu()const { return nam.getNutritivnu(); }
+	NutritivnaVrednost odreditiNutritivnu()const {
+	return NutritivnaVrednost(nam.getNutritivnu().getUgljene() / 100 * kolicina, nam.getNutritivnu().getMasti() / 100 * kolicina, nam.getNutritivnu().getProtein() / 100 * kolicina);
+	}
 	double KalorijeNamernice() const { return nam.getNutritivnu().kalorije(); }
 
 	friend ostream& operator<<(ostream & os, const Sastojak & s) {

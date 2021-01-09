@@ -18,7 +18,7 @@ int main() {
 	cout << (nam == nam2)<<endl;
 	cout << nam2;
 
-	Sastojak s(nam, 100);
+	Sastojak s(nam, 10);
 	cout << s.odreditiNutritivnu() << endl << s.KalorijeNamernice() << endl;
 	cout << s;
 }
