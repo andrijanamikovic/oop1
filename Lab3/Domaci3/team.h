@@ -9,8 +9,8 @@ protected:
 	int duzina;
 	string naziv;
 	Igrac** niz;
-	void kopiraj(const Tim& t);
-	void premesti(Tim& t);
+	virtual void kopiraj(const Tim& t);
+	virtual void premesti(Tim& t);
 	void brisi();
 	virtual void pisi(ostream& os) const {
 		for (int i = 0; i <duzina; i++) {

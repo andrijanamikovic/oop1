@@ -9,6 +9,9 @@ class Privilegovani :public Tim {
 		os << naziv << "[";
 		Tim::pisi(os);
 	}
+protected:
+	void kopiraj(const Privilegovani& t);
+	void premesti(Privilegovani& t);
 public:
 	Privilegovani(int d, string n, int m):Tim(d,n),min(m){}
 	void dodajIgraca(int pozicija, Igrac& i) override {
