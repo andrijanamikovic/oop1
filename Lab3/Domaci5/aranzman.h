@@ -19,7 +19,7 @@ public:
 
 	int getTrajanje() { return (kraj-pocetak); }
 
-	int getCena();
+	double getCena();
 
 	void dodeliSmestaj(Smestaj& s);
 	void dodelirPrevoz(Prevoz& p);

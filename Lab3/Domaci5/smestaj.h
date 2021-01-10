@@ -4,7 +4,8 @@
 #include "destinacija.h"
 #include "greske.h"
 
-enum TIP {HOTEL, APARTMAN };
+
+enum  TIP {HOTEL, APARTMAN };
 const string nizSmestaja[2] = { "HOTEL","ARANZMAN" };
 class Smestaj {
 	Destinacija d;
@@ -13,11 +14,13 @@ class Smestaj {
 	int broj_zvezdica;
 	double cena;
 public:
-	Smestaj(Destinacija des, TIP t, string n, int br, double c) :d(des) {
+	Smestaj(Destinacija des, TIP t, string n, int br, double c) :d(des.getNaziv(),des.getOpis()) {
+		//cout << "CENA SMESTAJA:" << c;
 		if (br < 1 || br > 5)  throw GNeZvezdice();
 		broj_zvezdica = br;
 		naziv = n;
 		cena = c;
+		
 		tip = t;
 	}
 

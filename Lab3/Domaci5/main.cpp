@@ -16,10 +16,10 @@ int main() {
 		d1.oceni(6);
 		d1.oceni(4);
 		d2.oceni(3);
+		Smestaj s(d1, TIP::HOTEL, "Atina", 3, 10);
+		cout << s << endl << s.getCenu() << endl;
 		cout << (d1 > d2) << endl;
 		cout << d1 << " " << d2 << endl;
-		Smestaj s(d1, TIP::HOTEL, "Atina", 3, 2);
-		cout << s << endl;
 		Prevoz p(d1, 50.5);
 		cout << p.getDestinaciju() << " " << p.getCenu() << endl;
 		Datum datum1(2, 5, 2020);
