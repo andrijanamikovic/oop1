@@ -6,6 +6,7 @@
 #include "operand.h"
 #include "operator.h"
 #include "sabiranje.h"
+#include "generator.h"
 
 
 using namespace std;
@@ -26,11 +27,28 @@ int main() {
 		cout << endl << l;*/
 		Operand a("A");
 		Operand b("B");
+		Operand c("C");
 		Izraz i;
 		i += a.kopija();
 		Sabiranje s;
 		i += s.kopija();
-		cout << " " << i;
+		Leva l;
+		Desna d;
+		i += l.kopija();
+		i += b.kopija();
+		i += s.kopija();
+		i += c.kopija();
+		i += d.kopija();
+		i += s.kopija();
+		Operand da("D");
+		i += da.kopija();
+		//cout << i <<endl;
+	
+		cout << "Infiks : " << i<<endl;
+		
+		Generator::get()(i);
+		cout <<"Postfiks: "<<i;
+
 
 
 	}

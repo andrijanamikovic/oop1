@@ -12,6 +12,8 @@ public:
 
 	virtual char getOZnaka() const  = 0;
 	virtual string getNatpis() const = 0;
+	
+	
 
 	virtual Element* kopija() = 0;
 	

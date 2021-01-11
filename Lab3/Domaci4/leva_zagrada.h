@@ -5,11 +5,13 @@
 
 class Leva: public Element {
 public:
-
+	Leva():Element(){}
 	char getOZnaka() const override { return '('; }
 	string getNatpis() const override { return "("; }
 
-	virtual Leva* kopija() = 0;
+	Leva* kopija() {
+		return this;
+	}
 
 
 };

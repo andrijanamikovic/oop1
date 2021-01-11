@@ -4,6 +4,9 @@
 #include "elementu.h"
 
 class Desna :public Element {
+
+public:
+	Desna() :Element() {}
 	char getOZnaka() const override { return ')'; }
 	string getNatpis() const override { return ")"; }
 

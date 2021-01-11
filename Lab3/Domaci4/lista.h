@@ -2,6 +2,8 @@
 #define _lista_h_
 #include <exception>
 
+#include <iostream>
+
 using namespace std;
 
 class GPrazna :public exception {
@@ -103,9 +105,8 @@ void Lista<T>::kopiraj(const Lista<T>& l)
 {
 	br = l.br;
 	prvi = posl = nullptr;
-	Elem* pom = prvi;
+	Elem* pom = l.prvi;
 	while (pom) {
-		//posl = (!prvi ? prvi : posl->next) = new Elem(pom->data);
 		posl = (!prvi ? prvi : posl->next) = new Elem(pom->data->kopija());
 		pom = pom->next;
 	}
@@ -127,7 +128,6 @@ void Lista<T>::brisi()
 	while (prvi) {
 		Elem* stari = prvi;
 		prvi = prvi->next;
-		//delete stari->data;
 		delete stari;
 	}
 	posl = nullptr;
