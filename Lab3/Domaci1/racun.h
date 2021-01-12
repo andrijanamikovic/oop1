@@ -17,11 +17,11 @@ public:
 	int getBrojRacuna() const { return brojRacuna; }
 	int getIznos() const { return iznos; }
 
-	void prenos(int i, Racun& r1) { //da li moze da bude void i samo da baca gresku ili mora da vraca bool?
-		if (i > iznos) throw GNemateSredstva();
+	bool prenos(int i, Racun& r1) { 
+		if (i > iznos) return false;
 		r1.iznos += i;
 		iznos -= i;
-		//return true;
+		return true;
 	}
 
 	Racun& operator+=(int i) {

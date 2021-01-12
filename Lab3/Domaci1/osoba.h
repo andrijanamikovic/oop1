@@ -14,6 +14,11 @@ public:
 	Osoba(const Osoba&) = delete;
 	Osoba& operator=(const Osoba&) = delete;
 
+	string getIme() const { return ime; }
+	string getJMBG() const { return jmbg; }
+	Datum getDatum() const { return d; }
+
+
 	friend ostream& operator<<(ostream& os, const Osoba& o) {
 		return os << "O(" << o.ime << "," << o.jmbg << "," << o.d << ")";
 	}
