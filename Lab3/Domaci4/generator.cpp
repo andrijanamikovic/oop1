@@ -25,7 +25,6 @@ void Generator::operator()(Izraz& i)
 {
 	Izraz postfix;
 	Lista<Element> stack;
-	int rank = 0;
 	char c = ' ';
 
 while (i.getBr() != 0 ) {
@@ -34,7 +33,6 @@ while (i.getBr() != 0 ) {
 		if (a->getOZnaka() == 'D') {
 			if (a->getOZnaka() == c ) throw GPostfiks();
 			postfix += a->kopija();
-			rank++;
 		}
 		else if (a->getOZnaka() == '(') {
 			stack += a;
@@ -59,14 +57,12 @@ while (i.getBr() != 0 ) {
 			if (a->getOZnaka() == c) throw GPostfiks();
 			if (stack.getBr() == 0) {
 				stack += a;
-				rank--;
 			}
 			else {
 				Element* b = -stack;
 				if (prioritet(a) > prioritet(b)) {
 					stack += b;
 					stack += a;
-					rank--;
 				}
 				else if (prioritet(a) == prioritet(b)) {
 					//throw GPostfiks();
@@ -82,7 +78,6 @@ while (i.getBr() != 0 ) {
 						}
 						postfix += b;
 					}
-					if (rank!=1) throw GPostfiks();
 				}
 			}
 			
