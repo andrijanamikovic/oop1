@@ -42,6 +42,14 @@ int main() {
 		i += s.kopija();
 		Operand da("D");
 		i += da.kopija();
+		Operand r("R");
+		i += s.kopija();
+		i += l.kopija();
+		i += r.kopija();
+		Operand e("E");
+		i += s.kopija();
+		i += e.kopija();
+		i += d.kopija();
 		//cout << i <<endl;
 	
 		cout << "Infiks : " << i<<endl;
